@@ -1,6 +1,8 @@
 <?php
 defined('BASEPATH') or exit('No direct script access allowed');
 
+$CI = &get_instance();
+
 if (!$CI->db->table_exists(db_prefix() . 'mom_manager')) {
     $CI->db->query('CREATE TABLE `' . db_prefix() . 'mom_manager` (
         `id` INT(11) NOT NULL AUTO_INCREMENT,
@@ -16,3 +18,4 @@ if (!$CI->db->table_exists(db_prefix() . 'mom_manager')) {
         INDEX (`project_id`)
     ) ENGINE=InnoDB DEFAULT CHARSET=' . $CI->db->char_set . ';');
 }
+
