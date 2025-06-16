@@ -26,9 +26,9 @@ class Mom_manager_model extends App_Model
 
     public function add($data)
     {
-        $data['created_at'] = date('Y-m-d H:i:s');
-        $data['created_by'] = get_staff_user_id();
-        $data['hash'] = md5(uniqid(rand(), true)); // Generate unique hash for public link
+        $data['created_at']  = date('Y-m-d H:i:s');
+        $data['created_by']  = get_staff_user_id();
+        $data['hash']        = md5(uniqid(rand(), true)); // Generate unique hash for public link
 
         $this->db->insert(db_prefix() . 'mom_manager', $data);
         $insert_id = $this->db->insert_id();

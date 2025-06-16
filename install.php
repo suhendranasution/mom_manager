@@ -6,6 +6,7 @@ if (!$CI->db->table_exists(db_prefix() . 'mom_manager')) {
         `id` INT(11) NOT NULL AUTO_INCREMENT,
         `title` VARCHAR(255) NOT NULL,
         `content` LONGTEXT NOT NULL,
+        `meeting_date` DATE NOT NULL,
         `project_id` INT(11) NOT NULL,
         `hash` VARCHAR(32) NOT NULL,
         `created_by` INT(11) NOT NULL,

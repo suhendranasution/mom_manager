@@ -11,6 +11,7 @@
             <?php echo form_hidden('mom_id'); // Hidden input untuk menyimpan ID saat mode edit ?>
             
             <?php echo render_input('title', 'mom_manager_title', '', 'text', ['data-title-validate' => true]); ?>
+            <?php echo render_date_input('meeting_date', 'mom_manager_meeting_date'); ?>
 
             <p class="bold"><?php echo _l('mom_manager_content'); ?></p>
             <?php echo render_textarea('content', '', '', [], [], '', 'tinymce'); ?>
